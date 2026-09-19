@@ -825,21 +825,6 @@
   <data name="Menu.FastFlags.Presets.FullscreenTitlebar.Description" xml:space="preserve">
     <value>Зупиняє це показуватись, коли ви в самому верху рухаєте мишу.</value>
   </data>
-  <data name="Menu.FastFlags.Presets.TextureQuality.Title" xml:space="preserve">
-    <value>Якість текстур</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level0" xml:space="preserve">
-    <value>Рівень 0 (Найнижчий)</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level1" xml:space="preserve">
-    <value>Рівень 1</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level2" xml:space="preserve">
-    <value>Рівень 2</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level3" xml:space="preserve">
-    <value>Рівень 3 (Найвищий)</value>
-  </data>
   <data name="Dialog.Connectivity.UnableToDownload" xml:space="preserve">
     <value>Fishstrap не може завантажити Roblox</value>
   </data>
@@ -1429,12 +1414,6 @@ Fishstrap встановлено на "{1}".</value>
   <data name="Bootstrapper.ExtractionFailed.Message" xml:space="preserve">
     <value>Деякий вміст може бути відсутнім. Примусово перевстановіть roblox в налаштування аби виправити це.</value>
   </data>
-  <data name="Menu.Integrations.MultiInstanceLaunching.Title" xml:space="preserve">
-    <value>Дозволити багаторівневий запуск</value>
-  </data>
-  <data name="Menu.Integrations.MultiInstanceLaunching.Description" xml:space="preserve">
-    <value>Дозволяє використовувати більше одного клієнта Roblox що відкриті одночасно.</value>
-  </data>
   <data name="Common.Rename" xml:space="preserve">
     <value>Перейменувати</value>
   </data>
@@ -1474,9 +1453,6 @@ Fishstrap встановлено на "{1}".</value>
   <data name="Bootstrapper.Experimental.BetterMatchmaking.RandomizeServer.Description" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="Menu.Integrations.MultiInstanceLaunching.Warning" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="Enums.BootstrapperStyle.TerminalDialog" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1484,6 +1460,36 @@ Fishstrap встановлено на "{1}".</value>
     <value />
   </data>
   <data name="Enums.DiscordRPCStatusDisplay.Details" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Menu.Integrations.StatusDisplay.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Menu.Integrations.StatusDisplay.Description" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Menu.FastFlags.Presets.TextureQuality.Title" xml:space="preserve">
+    <value>Якість текстур</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level0" xml:space="preserve">
+    <value>Рівень 0 (Найнижчий)</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level1" xml:space="preserve">
+    <value>Рівень 1</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level2" xml:space="preserve">
+    <value>Рівень 2</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level3" xml:space="preserve">
+    <value>Рівень 3 (Найвищий)</value>
+  </data>
+  <data name="Menu.Integrations.MultiInstanceLaunching.Title" xml:space="preserve">
+    <value>Дозволити багаторівневий запуск</value>
+  </data>
+  <data name="Menu.Integrations.MultiInstanceLaunching.Description" xml:space="preserve">
+    <value>Дозволяє використовувати більше одного клієнта Roblox що відкриті одночасно.</value>
+  </data>
+  <data name="Menu.Integrations.MultiInstanceLaunching.Warning" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="Menu.Channel.RobloxUpgrades" type="System.Resources.ResXNullRef, System.Windows.Forms">
@@ -1541,12 +1547,6 @@ Fishstrap встановлено на "{1}".</value>
     <value />
   </data>
   <data name="Menu.GBSEditor.Graphics.Description" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Menu.Integrations.StatusDisplay.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Menu.Integrations.StatusDisplay.Description" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
 </root>

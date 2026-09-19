@@ -825,21 +825,6 @@ Memilih 'Tidak' akan mengabaikan amaran ini dan pemasangan akan diteruskan.</val
   <data name="Menu.FastFlags.Presets.FullscreenTitlebar.Description" xml:space="preserve">
     <value>Menghalang ia daripada muncul ketika anda menggerakkan tetikus ke bahagian atas skrin.</value>
   </data>
-  <data name="Menu.FastFlags.Presets.TextureQuality.Title" xml:space="preserve">
-    <value>Kualiti tekstur</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level0" xml:space="preserve">
-    <value>Tahap 0 (Terendah)</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level1" xml:space="preserve">
-    <value>Tahap 1</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level2" xml:space="preserve">
-    <value>Tahap 2</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level3" xml:space="preserve">
-    <value>Tahap 3 (Tertinggi)</value>
-  </data>
   <data name="Dialog.Connectivity.UnableToDownload" xml:space="preserve">
     <value>Fishstrap tidak dapat memuat turun Roblox</value>
   </data>
@@ -1421,12 +1406,6 @@ Sila tutup sebarang aplikasi yang mungkin menggunakan fail Roblox, dan cuba lagi
   <data name="Bootstrapper.ExtractionFailed.Message" xml:space="preserve">
     <value>Sebahagian kandungan mungkin hilang. Sila pergi ke bahagian tetapan untuk memaksa pemasangan semula Roblox bagi membetulkan masalah ini.</value>
   </data>
-  <data name="Menu.Integrations.MultiInstanceLaunching.Title" xml:space="preserve">
-    <value>Benarkan pelancaran lebih dari satu instance</value>
-  </data>
-  <data name="Menu.Integrations.MultiInstanceLaunching.Description" xml:space="preserve">
-    <value>Membenarkan lebih daripada satu instance klien permainan Roblox dibuka secara serentak.</value>
-  </data>
   <data name="Common.Rename" xml:space="preserve">
     <value>Namakan Semula</value>
   </data>
@@ -1466,9 +1445,6 @@ Sila tutup sebarang aplikasi yang mungkin menggunakan fail Roblox, dan cuba lagi
   <data name="Bootstrapper.Experimental.BetterMatchmaking.RandomizeServer.Description" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="Menu.Integrations.MultiInstanceLaunching.Warning" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="Enums.BootstrapperStyle.TerminalDialog" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1476,6 +1452,36 @@ Sila tutup sebarang aplikasi yang mungkin menggunakan fail Roblox, dan cuba lagi
     <value />
   </data>
   <data name="Enums.DiscordRPCStatusDisplay.Details" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Menu.Integrations.StatusDisplay.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Menu.Integrations.StatusDisplay.Description" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Menu.FastFlags.Presets.TextureQuality.Title" xml:space="preserve">
+    <value>Kualiti tekstur</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level0" xml:space="preserve">
+    <value>Tahap 0 (Terendah)</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level1" xml:space="preserve">
+    <value>Tahap 1</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level2" xml:space="preserve">
+    <value>Tahap 2</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level3" xml:space="preserve">
+    <value>Tahap 3 (Tertinggi)</value>
+  </data>
+  <data name="Menu.Integrations.MultiInstanceLaunching.Title" xml:space="preserve">
+    <value>Benarkan pelancaran lebih dari satu instance</value>
+  </data>
+  <data name="Menu.Integrations.MultiInstanceLaunching.Description" xml:space="preserve">
+    <value>Membenarkan lebih daripada satu instance klien permainan Roblox dibuka secara serentak.</value>
+  </data>
+  <data name="Menu.Integrations.MultiInstanceLaunching.Warning" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="Menu.Channel.RobloxUpgrades" type="System.Resources.ResXNullRef, System.Windows.Forms">
@@ -1533,12 +1539,6 @@ Sila tutup sebarang aplikasi yang mungkin menggunakan fail Roblox, dan cuba lagi
     <value />
   </data>
   <data name="Menu.GBSEditor.Graphics.Description" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Menu.Integrations.StatusDisplay.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Menu.Integrations.StatusDisplay.Description" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
 </root>

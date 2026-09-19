@@ -827,21 +827,6 @@ Sélectionner 'Non' ignorera cet avertissement et continuera l'installation.</va
   <data name="Menu.FastFlags.Presets.FullscreenTitlebar.Description" xml:space="preserve">
     <value>L'empêche d'apparaitre quand vous déplacez votre souris au sommet de votre écran.</value>
   </data>
-  <data name="Menu.FastFlags.Presets.TextureQuality.Title" xml:space="preserve">
-    <value>Qualité des textures</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level0" xml:space="preserve">
-    <value>Niveau 0 (Plus bas)</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level1" xml:space="preserve">
-    <value>Niveau 1</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level2" xml:space="preserve">
-    <value>Niveau 2</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level3" xml:space="preserve">
-    <value>Niveau 3 (Plus haut)</value>
-  </data>
   <data name="Dialog.Connectivity.UnableToDownload" xml:space="preserve">
     <value>Fishstrap est incapable de télécharger Roblox</value>
   </data>
@@ -1431,12 +1416,6 @@ Retour à la valeur par défaut {1}.</value>
   <data name="Bootstrapper.ExtractionFailed.Message" xml:space="preserve">
     <value>Certains contenus peuvent être manquants. Forcez une réinstallation de Roblox dans les paramètres pour résoudre ce problème.</value>
   </data>
-  <data name="Menu.Integrations.MultiInstanceLaunching.Title" xml:space="preserve">
-    <value>Permettre le lancement multi-instances</value>
-  </data>
-  <data name="Menu.Integrations.MultiInstanceLaunching.Description" xml:space="preserve">
-    <value>Permet d'avoir plusieurs instances de client de jeu Roblox ouvertes simultanément.</value>
-  </data>
   <data name="Common.Rename" xml:space="preserve">
     <value>Renommer</value>
   </data>
@@ -1476,9 +1455,6 @@ Retour à la valeur par défaut {1}.</value>
   <data name="Bootstrapper.Experimental.BetterMatchmaking.RandomizeServer.Description" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="Menu.Integrations.MultiInstanceLaunching.Warning" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="Enums.BootstrapperStyle.TerminalDialog" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1486,6 +1462,36 @@ Retour à la valeur par défaut {1}.</value>
     <value />
   </data>
   <data name="Enums.DiscordRPCStatusDisplay.Details" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Menu.Integrations.StatusDisplay.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Menu.Integrations.StatusDisplay.Description" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Menu.FastFlags.Presets.TextureQuality.Title" xml:space="preserve">
+    <value>Qualité des textures</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level0" xml:space="preserve">
+    <value>Niveau 0 (Plus bas)</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level1" xml:space="preserve">
+    <value>Niveau 1</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level2" xml:space="preserve">
+    <value>Niveau 2</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level3" xml:space="preserve">
+    <value>Niveau 3 (Plus haut)</value>
+  </data>
+  <data name="Menu.Integrations.MultiInstanceLaunching.Title" xml:space="preserve">
+    <value>Permettre le lancement multi-instances</value>
+  </data>
+  <data name="Menu.Integrations.MultiInstanceLaunching.Description" xml:space="preserve">
+    <value>Permet d'avoir plusieurs instances de client de jeu Roblox ouvertes simultanément.</value>
+  </data>
+  <data name="Menu.Integrations.MultiInstanceLaunching.Warning" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="Menu.Channel.RobloxUpgrades" type="System.Resources.ResXNullRef, System.Windows.Forms">
@@ -1543,12 +1549,6 @@ Retour à la valeur par défaut {1}.</value>
     <value />
   </data>
   <data name="Menu.GBSEditor.Graphics.Description" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Menu.Integrations.StatusDisplay.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Menu.Integrations.StatusDisplay.Description" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
 </root>

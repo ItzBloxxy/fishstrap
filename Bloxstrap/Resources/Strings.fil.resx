@@ -826,21 +826,6 @@ Ang pagpili ng 'Hindi' ay hindi papansinin ang babalang ito at itutuloy ang pag-
   <data name="Menu.FastFlags.Presets.FullscreenTitlebar.Description" xml:space="preserve">
     <value>Hindi siya ipinapakita pag ginalaw mo ang iyong mouse sa tuktok ng screen.</value>
   </data>
-  <data name="Menu.FastFlags.Presets.TextureQuality.Title" xml:space="preserve">
-    <value>Quality ng texture</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level0" xml:space="preserve">
-    <value>Level 0 (Lowest)</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level1" xml:space="preserve">
-    <value>Level 1</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level2" xml:space="preserve">
-    <value>Level 2</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level3" xml:space="preserve">
-    <value>Level 3 (Highest)</value>
-  </data>
   <data name="Dialog.Connectivity.UnableToDownload" xml:space="preserve">
     <value>Hindi maka-download ng Roblox ang Fishstrap</value>
   </data>
@@ -1416,12 +1401,6 @@ Isarado muna ang kahit anong application na maaaring gamitin ang mga file ng Rob
   <data name="Bootstrapper.ExtractionFailed.Message" xml:space="preserve">
     <value>May content na maaaring nawawala. Pilitin ang Roblox Installation sa settings para ayusin ito.</value>
   </data>
-  <data name="Menu.Integrations.MultiInstanceLaunching.Title" xml:space="preserve">
-    <value>I-allow ang multi-instance launching</value>
-  </data>
-  <data name="Menu.Integrations.MultiInstanceLaunching.Description" xml:space="preserve">
-    <value>Ina-allow ang pagbukas ng higit sa isang Roblox game client instancena bukas sabay-sabay.</value>
-  </data>
   <data name="Common.Rename" xml:space="preserve">
     <value>Palitan ng pangalan</value>
   </data>
@@ -1462,9 +1441,6 @@ Isarado muna ang kahit anong application na maaaring gamitin ang mga file ng Rob
   <data name="Bootstrapper.Experimental.BetterMatchmaking.RandomizeServer.Description" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="Menu.Integrations.MultiInstanceLaunching.Warning" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="Enums.BootstrapperStyle.TerminalDialog" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1472,6 +1448,36 @@ Isarado muna ang kahit anong application na maaaring gamitin ang mga file ng Rob
     <value />
   </data>
   <data name="Enums.DiscordRPCStatusDisplay.Details" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Menu.Integrations.StatusDisplay.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Menu.Integrations.StatusDisplay.Description" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Menu.FastFlags.Presets.TextureQuality.Title" xml:space="preserve">
+    <value>Quality ng texture</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level0" xml:space="preserve">
+    <value>Level 0 (Lowest)</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level1" xml:space="preserve">
+    <value>Level 1</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level2" xml:space="preserve">
+    <value>Level 2</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level3" xml:space="preserve">
+    <value>Level 3 (Highest)</value>
+  </data>
+  <data name="Menu.Integrations.MultiInstanceLaunching.Title" xml:space="preserve">
+    <value>I-allow ang multi-instance launching</value>
+  </data>
+  <data name="Menu.Integrations.MultiInstanceLaunching.Description" xml:space="preserve">
+    <value>Ina-allow ang pagbukas ng higit sa isang Roblox game client instancena bukas sabay-sabay.</value>
+  </data>
+  <data name="Menu.Integrations.MultiInstanceLaunching.Warning" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="Menu.FastFlags.Presets.EscapeMenuVersion.Title" xml:space="preserve">
@@ -1526,12 +1532,6 @@ Isarado muna ang kahit anong application na maaaring gamitin ang mga file ng Rob
     <value />
   </data>
   <data name="Menu.GBSEditor.Graphics.Description" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Menu.Integrations.StatusDisplay.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Menu.Integrations.StatusDisplay.Description" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
 </root>

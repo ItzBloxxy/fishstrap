@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
 using Wpf.Ui.Controls.Interfaces;
 using Wpf.Ui.Mvvm.Contracts;
@@ -72,6 +73,9 @@ namespace Bloxstrap.UI.Elements.Settings
                 INavigationItem? currentPage = RootNavigation.Current;
 
                 App.State.Prop.LastPage = currentPage?.PageType.FullName!;
+
+                if (currentPage == AccountNavItem)
+                    RootBreadcrumb.Current = Strings.Menu_Account_Title;
             }
 
             // run scraper
@@ -81,7 +85,58 @@ namespace Bloxstrap.UI.Elements.Settings
                 {
                     BuildSearchIndexAutomatically();
                 }, System.Windows.Threading.DispatcherPriority.Background);
+
+                LoadAccountNavItem();
             };
+        }
+
+        private async void LoadAccountNavItem()
+        {
+            const string LOG_IDENT = "MainWindow::LoadAccountNavItem";
+
+            if (!App.Settings.Prop.AllowCookieAccess)
+                return;
+
+            try
+            {
+                if (!App.Cookies.Loaded)
+                    await Task.Run(App.Cookies.LoadCookies);
+
+                AuthenticatedUser? user = await App.Cookies.GetAuthenticated();
+
+                if (user is null)
+                    return;
+
+                AccountName.Text = String.IsNullOrEmpty(user.Displayname) ? user.Username : user.Displayname;
+                AccountUsername.Text = $"@{user.Username}";
+                AccountUsername.Visibility = Visibility.Visible;
+
+                var thumbnails = await Http.GetJson<ApiArrayResponse<ThumbnailResponse>>(
+                    UrlBuilder.BuildApiUrl("thumbnails", $"v1/users/avatar-headshot?userIds={user.Id}&size=48x48&format=Png&isCircular=true"));
+
+                string? imageUrl = thumbnails.Data.FirstOrDefault()?.ImageUrl;
+
+                if (String.IsNullOrEmpty(imageUrl))
+                    return;
+
+                var avatar = new BitmapImage();
+
+                avatar.BeginInit();
+                avatar.StreamSource = new MemoryStream(await App.HttpClient.GetByteArrayAsync(imageUrl));
+                avatar.CacheOption = BitmapCacheOption.OnLoad;
+                avatar.EndInit();
+                avatar.Freeze();
+
+                AccountAvatar.Source = avatar;
+                AccountAvatarBorder.Visibility = Visibility.Visible;
+
+                AccountNavItem.Icon = SymbolRegular.Empty;
+            }
+            catch (Exception ex)
+            {
+                App.Logger.WriteLine(LOG_IDENT, "Failed to load the account navigation item");
+                App.Logger.WriteException(LOG_IDENT, ex);
+            }
         }
 
         public void LoadState()

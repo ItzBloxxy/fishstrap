@@ -2871,6 +2871,33 @@ namespace Bloxstrap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Settings and Information related to your Roblox account..
+        /// </summary>
+        public static string Menu_Account_Description {
+            get {
+                return ResourceManager.GetString("Menu.Account.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Switch.
+        /// </summary>
+        public static string Menu_Account_Switch {
+            get {
+                return ResourceManager.GetString("Menu.Account.Switch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Account.
+        /// </summary>
+        public static string Menu_Account_Title {
+            get {
+                return ResourceManager.GetString("Menu.Account.Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All files.
         /// </summary>
         public static string Menu_AllFiles {
@@ -4855,6 +4882,132 @@ namespace Bloxstrap.Resources {
         public static string Menu_MoreInfo {
             get {
                 return ResourceManager.GetString("Menu.MoreInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Breakdown.
+        /// </summary>
+        public static string Menu_Playtime_Breakdown {
+            get {
+                return ResourceManager.GetString("Menu.Playtime.Breakdown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Playtime is read from your Roblox account, so this needs account access enabled under Behaviour..
+        /// </summary>
+        public static string Menu_Playtime_CookieAccessRequired_Description {
+            get {
+                return ResourceManager.GetString("Menu.Playtime.CookieAccessRequired.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Account access required.
+        /// </summary>
+        public static string Menu_Playtime_CookieAccessRequired_Title {
+            get {
+                return ResourceManager.GetString("Menu.Playtime.CookieAccessRequired.Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not load your playtime.
+        /// </summary>
+        public static string Menu_Playtime_LoadFailed {
+            get {
+                return ResourceManager.GetString("Menu.Playtime.LoadFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading your playtime….
+        /// </summary>
+        public static string Menu_Playtime_Loading {
+            get {
+                return ResourceManager.GetString("Menu.Playtime.Loading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Roblox hasn&apos;t recorded any playtime for you this week..
+        /// </summary>
+        public static string Menu_Playtime_NoData {
+            get {
+                return ResourceManager.GetString("Menu.Playtime.NoData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Other.
+        /// </summary>
+        public static string Menu_Playtime_Other {
+            get {
+                return ResourceManager.GetString("Menu.Playtime.Other", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Refresh.
+        /// </summary>
+        public static string Menu_Playtime_Refresh {
+            get {
+                return ResourceManager.GetString("Menu.Playtime.Refresh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Screen time.
+        /// </summary>
+        public static string Menu_Playtime_ScreenTime {
+            get {
+                return ResourceManager.GetString("Menu.Playtime.ScreenTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7 day average.
+        /// </summary>
+        public static string Menu_Playtime_SevenDayAverage {
+            get {
+                return ResourceManager.GetString("Menu.Playtime.SevenDayAverage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to THIS WEEK.
+        /// </summary>
+        public static string Menu_Playtime_ThisWeek {
+            get {
+                return ResourceManager.GetString("Menu.Playtime.ThisWeek", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Today.
+        /// </summary>
+        public static string Menu_Playtime_Today {
+            get {
+                return ResourceManager.GetString("Menu.Playtime.Today", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Top games.
+        /// </summary>
+        public static string Menu_Playtime_TopGames {
+            get {
+                return ResourceManager.GetString("Menu.Playtime.TopGames", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View more.
+        /// </summary>
+        public static string Menu_Playtime_ViewMore {
+            get {
+                return ResourceManager.GetString("Menu.Playtime.ViewMore", resourceCulture);
             }
         }
         

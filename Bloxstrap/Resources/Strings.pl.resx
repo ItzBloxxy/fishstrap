@@ -828,21 +828,6 @@ Wybranie opcji „Nie” spowoduje zignorowanie tego ostrzeżenia i kontynuowani
   <data name="Menu.FastFlags.Presets.FullscreenTitlebar.Description" xml:space="preserve">
     <value>Wyłącza pasek tytułowy, gdy przesuwasz mysz na górę ekranu.</value>
   </data>
-  <data name="Menu.FastFlags.Presets.TextureQuality.Title" xml:space="preserve">
-    <value>Jakość tekstur</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level0" xml:space="preserve">
-    <value>Poziom 0 (Najniższy)</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level1" xml:space="preserve">
-    <value>Poziom 1</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level2" xml:space="preserve">
-    <value>Poziom 2</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level3" xml:space="preserve">
-    <value>Poziom 3 (Najwyższy)</value>
-  </data>
   <data name="Dialog.Connectivity.UnableToDownload" xml:space="preserve">
     <value>Fishstrap nie może pobrać Roblox</value>
   </data>
@@ -1431,13 +1416,6 @@ Ustawiono domyślnie do {1}.</value>
   <data name="Bootstrapper.ExtractionFailed.Message" xml:space="preserve">
     <value>Może brakować niektórych treści. Zmuś ponowną instalację Roblox w ustawieniach, aby to naprawić.</value>
   </data>
-  <data name="Menu.Integrations.
-		Launching.Title" xml:space="preserve">
-    <value>Zezwól na uruchamianie wielu instancji</value>
-  </data>
-  <data name="Menu.Integrations.MultiInstanceLaunching.Description" xml:space="preserve">
-    <value>Pozwala na uruchomienie więcej niż jednej instancji klienta Roblox w tym samym czasie.</value>
-  </data>
   <data name="Common.Rename" xml:space="preserve">
     <value>Zmień nazwę</value>
   </data>
@@ -1477,9 +1455,6 @@ Ustawiono domyślnie do {1}.</value>
   <data name="Bootstrapper.Experimental.BetterMatchmaking.RandomizeServer.Description" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="Menu.Integrations.MultiInstanceLaunching.Warning" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="Enums.BootstrapperStyle.TerminalDialog" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1487,6 +1462,33 @@ Ustawiono domyślnie do {1}.</value>
     <value />
   </data>
   <data name="Enums.DiscordRPCStatusDisplay.Details" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Menu.Integrations.StatusDisplay.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Menu.Integrations.StatusDisplay.Description" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Menu.FastFlags.Presets.TextureQuality.Title" xml:space="preserve">
+    <value>Jakość tekstur</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level0" xml:space="preserve">
+    <value>Poziom 0 (Najniższy)</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level1" xml:space="preserve">
+    <value>Poziom 1</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level2" xml:space="preserve">
+    <value>Poziom 2</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level3" xml:space="preserve">
+    <value>Poziom 3 (Najwyższy)</value>
+  </data>
+  <data name="Menu.Integrations.MultiInstanceLaunching.Description" xml:space="preserve">
+    <value>Pozwala na uruchomienie więcej niż jednej instancji klienta Roblox w tym samym czasie.</value>
+  </data>
+  <data name="Menu.Integrations.MultiInstanceLaunching.Warning" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="Menu.Channel.RobloxUpgrades" type="System.Resources.ResXNullRef, System.Windows.Forms">
@@ -1546,10 +1548,7 @@ Ustawiono domyślnie do {1}.</value>
   <data name="Menu.GBSEditor.Graphics.Description" xml:space="preserve">
     <value />
   </data>
-  <data name="Menu.Integrations.StatusDisplay.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Menu.Integrations.StatusDisplay.Description" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="Menu.Integrations.&#xD;&#xA;		Launching.Title" xml:space="preserve">
+    <value>Zezwól na uruchamianie wielu instancji</value>
   </data>
 </root>

@@ -29,7 +29,21 @@ namespace Bloxstrap
         private const string AuthPattern = $@"\t{AuthCookieName}\t(.+?)(;|$)";
         private string CookiesPath => Path.Combine(Paths.Roblox, "LocalStorage", Deployment.IsDefaultRobloxDomain ? "RobloxCookies.dat" : $"{Deployment.RobloxDomain}_RobloxCookies.dat");
 
-        public async Task<HttpResponseMessage> AuthRequest(HttpRequestMessage request)
+        public async Task<string> GetXCSRF()
+        {
+            Uri logoutUrl = UrlBuilder.BuildApiUrl("auth", "v2/logout");
+
+            HttpResponseMessage response = await AuthPost(logoutUrl, null);
+
+            response.Headers.TryGetValues("x-csrf-token", out IEnumerable<string>? values);
+
+            if (values is null)
+                throw new HttpRequestException("Failed to get x-csrf-token from response");
+
+            return values.First();
+        }
+
+        public async Task<HttpResponseMessage> AuthRequest(HttpRequestMessage request, string csrf = "")
         {
             string? host = request.RequestUri?.Host;
 
@@ -46,14 +60,17 @@ namespace Bloxstrap
             if (!Enabled)
                 throw new NullReferenceException("Cookie access is not enabled");
 
+            if (!String.IsNullOrEmpty(csrf))
+                request.Headers.Add("x-csrf-token", csrf);
+
             request.Headers.Add("Cookie", $".ROBLOSECURITY={AuthCookie}");
             var response = await App.HttpClient.SendAsync(request);
 
             return response;
         }
 
-        public async Task<HttpResponseMessage> AuthGet(Uri? uri) => await AuthRequest(new HttpRequestMessage { RequestUri = uri, Method = HttpMethod.Get });
-        public async Task<HttpResponseMessage> AuthPost(Uri? uri, HttpContent? content) => await AuthRequest(new HttpRequestMessage { RequestUri = uri, Content = content, Method = HttpMethod.Post });
+        public async Task<HttpResponseMessage> AuthGet(Uri? uri, string csrf = "") => await AuthRequest(new HttpRequestMessage { RequestUri = uri, Method = HttpMethod.Get }, csrf);
+        public async Task<HttpResponseMessage> AuthPost(Uri? uri, HttpContent? content, string csrf = "") => await AuthRequest(new HttpRequestMessage { RequestUri = uri, Content = content, Method = HttpMethod.Post }, csrf);
 
         public async Task<AuthenticatedUser?> GetAuthenticated()
         {
@@ -77,6 +94,121 @@ namespace Bloxstrap
             }
 
             return null;
+        }
+
+        public bool SetAuthCookie(string cookie)
+        {
+            const string LOG_IDENT = "CookiesManager::SetAuthCookie";
+
+            if (String.IsNullOrWhiteSpace(cookie))
+                throw new ArgumentException("Refusing to write an empty auth cookie");
+
+            if (Utilities.IsRobloxRunning())
+            {
+                App.Logger.WriteLine(LOG_IDENT, "Roblox is running, refusing to touch the cookie store");
+                return false;
+            }
+
+            if (!File.Exists(CookiesPath))
+            {
+                App.Logger.WriteLine(LOG_IDENT, "Cookie file not found");
+                return false;
+            }
+
+            string backupPath = CookiesPath + ".fishstrap-bak";
+            string? tempPath = null;
+
+            try
+            {
+                string original = File.ReadAllText(CookiesPath);
+                var cookies = JsonSerializer.Deserialize<RobloxCookies>(original)!;
+
+                byte[] plain = ProtectedData.Unprotect(
+                    Convert.FromBase64String(cookies.Cookies), null, DataProtectionScope.CurrentUser);
+
+                string jar = Encoding.UTF8.GetString(plain);
+
+                if (!Regex.IsMatch(jar, AuthPattern))
+                {
+                    App.Logger.WriteLine(LOG_IDENT, "No auth cookie to replace");
+                    return false;
+                }
+
+                int entriesBefore = jar.Split(';').Length;
+
+                string updated = Regex.Replace(jar, AuthPattern, m => $"	{AuthCookieName}	{cookie}{m.Groups[2].Value}");
+
+                if (updated.Split(';').Length != entriesBefore)
+                    throw new InvalidOperationException("Cookie count changed during replacement");
+
+                cookies.Cookies = Convert.ToBase64String(ProtectedData.Protect(
+                    Encoding.UTF8.GetBytes(updated), null, DataProtectionScope.CurrentUser));
+
+                File.Copy(CookiesPath, backupPath, true);
+
+                tempPath = CookiesPath + ".fishstrap-tmp";
+                File.WriteAllText(tempPath, JsonSerializer.Serialize(cookies), new UTF8Encoding(false));
+
+                Filesystem.AssertReadOnly(CookiesPath);
+                File.Replace(tempPath, CookiesPath, null);
+                tempPath = null;
+
+                if (!VerifyWrite(cookie, entriesBefore))
+                {
+                    App.Logger.WriteLine(LOG_IDENT, "Write did not verify, rolling back");
+                    File.Copy(backupPath, CookiesPath, true);
+                    return false;
+                }
+
+                AuthCookie = cookie;
+                State = CookieState.Success;
+
+                App.Logger.WriteLine(LOG_IDENT, "Auth cookie replaced");
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                App.Logger.WriteLine(LOG_IDENT, "Failed to replace the auth cookie");
+                App.Logger.WriteException(LOG_IDENT, ex);
+
+                try
+                {
+                    if (File.Exists(backupPath))
+                        File.Copy(backupPath, CookiesPath, true);
+                }
+                catch (Exception restoreEx)
+                {
+                    App.Logger.WriteException(LOG_IDENT, restoreEx);
+                }
+
+                return false;
+            }
+            finally
+            {
+                foreach (string? leftover in new[] { tempPath, backupPath })
+                {
+                    if (leftover is null || !File.Exists(leftover))
+                        continue;
+
+                    try { File.Delete(leftover); }
+                    catch (Exception ex) { App.Logger.WriteException(LOG_IDENT, ex); }
+                }
+            }
+        }
+
+        private bool VerifyWrite(string expected, int expectedEntries)
+        {
+            var written = JsonSerializer.Deserialize<RobloxCookies>(File.ReadAllText(CookiesPath))!;
+
+            string jar = Encoding.UTF8.GetString(ProtectedData.Unprotect(
+                Convert.FromBase64String(written.Cookies), null, DataProtectionScope.CurrentUser));
+
+            Match match = Regex.Match(jar, AuthPattern);
+
+            return match.Success
+                && match.Groups[1].Value == expected
+                && jar.Split(';').Length == expectedEntries;
         }
 
         public async Task LoadCookies()

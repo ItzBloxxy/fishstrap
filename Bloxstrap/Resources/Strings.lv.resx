@@ -829,21 +829,6 @@ Izvēloties 'Nē' šis brīdinājums tiks ignorēts un instalēšana tiks turpin
   <data name="Menu.FastFlags.Presets.FullscreenTitlebar.Description" xml:space="preserve">
     <value>Aptur to no parādīšanās, kad jūs novietojiet savu peli ekrāna augšdaļā.</value>
   </data>
-  <data name="Menu.FastFlags.Presets.TextureQuality.Title" xml:space="preserve">
-    <value>Tekstūru kvalitāte</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level0" xml:space="preserve">
-    <value>Līmenis 0 (Zemākais)</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level1" xml:space="preserve">
-    <value>Līmenis 1</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level2" xml:space="preserve">
-    <value>Līmenis 2</value>
-  </data>
-  <data name="Enums.FlagPresets.TextureQuality.Level3" xml:space="preserve">
-    <value>Līmenis 3 (Augstākais)</value>
-  </data>
   <data name="Dialog.Connectivity.UnableToDownload" xml:space="preserve">
     <value>Bloxstrap nespēj lejupielādēt Roblox</value>
   </data>
@@ -1401,12 +1386,6 @@ Noklusējums uz {1}.</value>
   <data name="Bootstrapper.ExtractionFailed.Message" xml:space="preserve">
     <value>Daļa no satura varētu būt pazudusi. Piespiedu kārtā lieciet Roblox pārinstalēšanu iestatījumos, lai šo salabotu.</value>
   </data>
-  <data name="Menu.Integrations.MultiInstanceLaunching.Title" xml:space="preserve">
-    <value>Atļauj multi-logu palaišanu</value>
-  </data>
-  <data name="Menu.Integrations.MultiInstanceLaunching.Description" xml:space="preserve">
-    <value>Atļauj vairākiem Roblox logiem būt atvērtiem vienlaicīgi.</value>
-  </data>
   <data name="Common.Rename" xml:space="preserve">
     <value>Mainīt nosaukumu</value>
   </data>
@@ -1451,9 +1430,6 @@ Nav ieteicams, ja tev ir lēns internets. Vismaz 3GB ar brīvu vietu ir nepiecie
   <data name="Bootstrapper.Experimental.BetterMatchmaking.RandomizeServer.Description" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="Menu.Integrations.MultiInstanceLaunching.Warning" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="Enums.BootstrapperStyle.TerminalDialog" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1461,6 +1437,36 @@ Nav ieteicams, ja tev ir lēns internets. Vismaz 3GB ar brīvu vietu ir nepiecie
     <value />
   </data>
   <data name="Enums.DiscordRPCStatusDisplay.Details" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Menu.Integrations.StatusDisplay.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Menu.Integrations.StatusDisplay.Description" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Menu.FastFlags.Presets.TextureQuality.Title" xml:space="preserve">
+    <value>Tekstūru kvalitāte</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level0" xml:space="preserve">
+    <value>Līmenis 0 (Zemākais)</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level1" xml:space="preserve">
+    <value>Līmenis 1</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level2" xml:space="preserve">
+    <value>Līmenis 2</value>
+  </data>
+  <data name="Enums.FlagPresets.TextureQuality.Level3" xml:space="preserve">
+    <value>Līmenis 3 (Augstākais)</value>
+  </data>
+  <data name="Menu.Integrations.MultiInstanceLaunching.Title" xml:space="preserve">
+    <value>Atļauj multi-logu palaišanu</value>
+  </data>
+  <data name="Menu.Integrations.MultiInstanceLaunching.Description" xml:space="preserve">
+    <value>Atļauj vairākiem Roblox logiem būt atvērtiem vienlaicīgi.</value>
+  </data>
+  <data name="Menu.Integrations.MultiInstanceLaunching.Warning" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="Menu.FastFlags.Presets.EscapeMenuVersion.Title" xml:space="preserve">
@@ -1537,11 +1543,5 @@ Nav ieteicams, ja tev ir lēns internets. Vismaz 3GB ar brīvu vietu ir nepiecie
   <data name="Menu.Bloxstrap.ExportData.ExportLogs" xml:space="preserve">
     <value>Visi Bloxstrap žurnāli</value>
     <comment>Label that appears next to a checkbox</comment>
-  </data>
-  <data name="Menu.Integrations.StatusDisplay.Title" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Menu.Integrations.StatusDisplay.Description" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
 </root>

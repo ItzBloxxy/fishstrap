@@ -1881,4 +1881,55 @@ Please don't change this setting unless you know what you're doing.</value>
   <data name="Menu.Integrations.RobloxTheme.Description" xml:space="preserve">
     <value>The theme used by the Roblox app.</value>
   </data>
+  <data name="Menu.Playtime.ScreenTime" xml:space="preserve">
+    <value>Screen time</value>
+  </data>
+  <data name="Menu.Playtime.SevenDayAverage" xml:space="preserve">
+    <value>7 day average</value>
+  </data>
+  <data name="Menu.Playtime.TopGames" xml:space="preserve">
+    <value>Top games</value>
+  </data>
+  <data name="Menu.Playtime.ViewMore" xml:space="preserve">
+    <value>View more</value>
+  </data>
+  <data name="Menu.Playtime.Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="Menu.Playtime.Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="Menu.Playtime.NoData" xml:space="preserve">
+    <value>Roblox hasn't recorded any playtime for you this week.</value>
+  </data>
+  <data name="Menu.Playtime.LoadFailed" xml:space="preserve">
+    <value>Could not load your playtime</value>
+  </data>
+  <data name="Menu.Playtime.CookieAccessRequired.Title" xml:space="preserve">
+    <value>Account access required</value>
+  </data>
+  <data name="Menu.Playtime.CookieAccessRequired.Description" xml:space="preserve">
+    <value>Playtime is read from your Roblox account, so this needs account access enabled under Behaviour.</value>
+  </data>
+  <data name="Menu.Playtime.Loading" xml:space="preserve">
+    <value>Loading your playtime…</value>
+  </data>
+  <data name="Menu.Playtime.Breakdown" xml:space="preserve">
+    <value>Breakdown</value>
+  </data>
+  <data name="Menu.Playtime.ThisWeek" xml:space="preserve">
+    <value>THIS WEEK</value>
+  </data>
+  <data name="Menu.Playtime.Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="Menu.Account.Title" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="Menu.Account.Description" xml:space="preserve">
+    <value>Settings and Information related to your Roblox account.</value>
+  </data>
+  <data name="Menu.Account.Switch" xml:space="preserve">
+    <value>Switch</value>
+  </data>
 </root>

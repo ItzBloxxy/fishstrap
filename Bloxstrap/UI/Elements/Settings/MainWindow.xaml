@@ -67,6 +67,24 @@
                     <ui:NavigationItem Content="{x:Static resources:Strings.Menu_FastFlagEditor_Title}" PageType="{x:Type pages:FastFlagEditorPage}" Tag="fastflageditor" Visibility="Collapsed" />
                 </ui:NavigationFluent.Items>
                 <ui:NavigationFluent.Footer>
+                    <ui:NavigationItem x:Name="AccountNavItem" PageTag="account" PageType="{x:Type pages:AccountPage}" Icon="Person24" Tag="account">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="AccountAvatarBorder" Grid.Column="0" Width="32" Height="32" CornerRadius="32" Margin="0,0,8,0"
+                                    ClipToBounds="True" Visibility="Collapsed"
+                                    Background="{ui:ThemeResource ControlFillColorDefaultBrush}">
+                                <Image x:Name="AccountAvatar" Stretch="UniformToFill" RenderOptions.BitmapScalingMode="HighQuality" />
+                            </Border>
+                            <StackPanel Grid.Column="1" MaxWidth="160" VerticalAlignment="Center">
+                                <TextBlock x:Name="AccountName" Text="{x:Static resources:Strings.Menu_Account_Title}" TextTrimming="CharacterEllipsis" />
+                                <TextBlock x:Name="AccountUsername" FontSize="12" Margin="0,1,0,0" Visibility="Collapsed"
+                                           TextTrimming="CharacterEllipsis" Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+                            </StackPanel>
+                        </Grid>
+                    </ui:NavigationItem>
                     <ui:NavigationItem Content="{x:Static resources:Strings.Menu_About_Title}" Icon="FoodFish24" Margin="0,0,0,12" Command="{Binding OpenAboutCommand, Mode=OneTime}" />
                 </ui:NavigationFluent.Footer>
             </ui:NavigationFluent>
@@ -78,7 +96,7 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <ui:InfoBar x:Name="AlertBar" Grid.Row="0" Margin="0,0,12,0" Padding="8" Visibility="Collapsed" IsOpen="True" Message="" Severity="Warning" IsClosable="False" />
-                <ui:Breadcrumb Grid.Row="1" Margin="0,0,0,5" Navigation="{Binding ElementName=RootNavigation}" />
+                <ui:Breadcrumb x:Name="RootBreadcrumb" Grid.Row="1" Margin="0,0,0,5" Navigation="{Binding ElementName=RootNavigation}" />
                 <Frame x:Name="RootFrame" Grid.Row="2" />
             </Grid>
         </Grid>
