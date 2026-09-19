@@ -27,7 +27,7 @@ namespace Bloxstrap.UI.ViewModels.Settings
         public ICommand EditCustomThemeCommand => new RelayCommand(EditCustomTheme);
         public ICommand ExportCustomThemeCommand => new RelayCommand(ExportCustomTheme);
 
-        public bool WindowManipulationEnabled => WindowManipulation.WindowManipulationAvailable;
+        public bool WindowManipulationEnabled => App.Settings.Prop.EnableWindowManipulation;
 
         public void OnNavigatedTo() => OnPropertyChanged(nameof(WindowManipulationEnabled));
 
@@ -96,6 +96,30 @@ namespace Bloxstrap.UI.ViewModels.Settings
             {
                 App.Settings.Prop.Theme = value;
                 ((MainWindow)Window.GetWindow(_page)!).ApplyTheme();
+            }
+        }
+
+        public bool AcrylicBackdropEnabled
+        {
+            get => App.Settings.Prop.UseAcrylicBackground;
+            set
+            {
+                App.Settings.Prop.UseAcrylicBackground = value;
+                ((MainWindow)Window.GetWindow(_page)!).ApplyTheme();
+
+                OnPropertyChanged(nameof(AcrylicBackdropEnabled));
+            }
+        }
+
+        public byte AcrylicBackgroundOpacity
+        {
+            get => App.Settings.Prop.AcrylicBackgroundOpacity;
+            set
+            {
+                App.Settings.Prop.AcrylicBackgroundOpacity = value;
+                ((MainWindow)Window.GetWindow(_page)!).ApplyTheme();
+
+                OnPropertyChanged(nameof(AcrylicBackgroundOpacity));
             }
         }
 

@@ -27,7 +27,8 @@
         public static string CustomThemes { get; private set; } = "";
 
         // cleaner paths
-        public static string RobloxCache { get; private set; } = "";
+        public static string RobloxCache => Path.Combine(Roblox, "rbx-storage");
+        public static string RobloxStudioCache { get; private set; } = "";
 
         public static string Application { get; private set; } = "";
 
@@ -50,7 +51,8 @@
             Modifications = Path.Combine(Base, "Modifications");
             CustomThemes = Path.Combine(Base, "CustomThemes");
 
-            RobloxCache = Path.Combine(Path.GetTempPath(), "Roblox");
+            // "studio is still using the old path," return said. -Naveandice
+            RobloxStudioCache = Path.Combine(Path.GetTempPath(), "Roblox");
 
             Application = Path.Combine(Base, $"{App.ProjectName}.exe");
         }
