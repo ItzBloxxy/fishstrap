@@ -73,7 +73,7 @@ namespace Bloxstrap
             )
         );
 
-        public static IDistribution Distribution { get; private set; } = null!;
+        public static IDistribution Distribution => Distributions.Get();
 
         private static bool _showingExceptionDialog = false;
 
@@ -316,7 +316,6 @@ namespace Bloxstrap
                 }
 
                 Settings.Load();
-                Distribution = Distributions.GetCurrent();
 
                 State.Load();
                 RobloxState.Load();

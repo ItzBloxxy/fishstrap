@@ -4,7 +4,7 @@ namespace Bloxstrap.Distribution
 {
     public abstract class CommonDist : IDistribution
     {
-        public virtual string? RobloxDomain { get; } = null;
+        public virtual string RobloxDomain { get; } = "roblox.com";
 
         public virtual Dictionary<string, int> CdnUrls { get; } = new()
         {
