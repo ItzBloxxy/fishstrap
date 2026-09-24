@@ -2332,6 +2332,24 @@ namespace Bloxstrap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fewest players.
+        /// </summary>
+        public static string Enums_Overlay_Order_Ascending {
+            get {
+                return ResourceManager.GetString("Enums.Overlay.Order.Ascending", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Most players.
+        /// </summary>
+        public static string Enums_Overlay_Order_Descending {
+            get {
+                return ResourceManager.GetString("Enums.Overlay.Order.Descending", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dark.
         /// </summary>
         public static string Enums_RobloxTheme_Dark {
@@ -4481,6 +4499,24 @@ namespace Bloxstrap.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enable an Overlay with QOL features. Press Ctrl+Alt+L in game to open it. Requires borderless or windowed mode..
+        /// </summary>
+        public static string Menu_Integrations_EnableOverlay_Description {
+            get {
+                return ResourceManager.GetString("Menu.Integrations.EnableOverlay.Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable in-game overlay.
+        /// </summary>
+        public static string Menu_Integrations_EnableOverlay_Title {
+            get {
+                return ResourceManager.GetString("Menu.Integrations.EnableOverlay.Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Lets Roblox start up with Windows and stay in the notification area after you close it..
         /// </summary>
         public static string Menu_Integrations_EnableRobloxBackgroundApp_Description {
@@ -4531,6 +4567,15 @@ namespace Bloxstrap.Resources {
         public static string Menu_Integrations_FakeVulkanBorderless_Title {
             get {
                 return ResourceManager.GetString("Menu.Integrations.FakeVulkanBorderless.Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Overlay.
+        /// </summary>
+        public static string Menu_Integrations_Overlay_Title {
+            get {
+                return ResourceManager.GetString("Menu.Integrations.Overlay.Title", resourceCulture);
             }
         }
         
@@ -4855,6 +4900,672 @@ namespace Bloxstrap.Resources {
         public static string Menu_MoreInfo {
             get {
                 return ResourceManager.GetString("Menu.MoreInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Earned.
+        /// </summary>
+        public static string Menu_Overlay_Badges_Earned {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Badges.Earned", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Earned {0}.
+        /// </summary>
+        public static string Menu_Overlay_Badges_EarnedOn {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Badges.EarnedOn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This experience has no badges..
+        /// </summary>
+        public static string Menu_Overlay_Badges_Empty {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Badges.Empty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not earned.
+        /// </summary>
+        public static string Menu_Overlay_Badges_NotEarned {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Badges.NotEarned", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Join an experience to see its badges..
+        /// </summary>
+        public static string Menu_Overlay_Badges_NotInGame {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Badges.NotInGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} of {1} earned.
+        /// </summary>
+        public static string Menu_Overlay_Badges_Progress {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Badges.Progress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} badges, progress unavailable.
+        /// </summary>
+        public static string Menu_Overlay_Badges_ProgressUnknown {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Badges.ProgressUnknown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rarity.
+        /// </summary>
+        public static string Menu_Overlay_Badges_Rarity {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Badges.Rarity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Today.
+        /// </summary>
+        public static string Menu_Overlay_Badges_Today {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Badges.Today", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total.
+        /// </summary>
+        public static string Menu_Overlay_Badges_Total {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Badges.Total", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Couldn&apos;t reach Roblox. Try again in a moment..
+        /// </summary>
+        public static string Menu_Overlay_Games_Failed {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Games.Failed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Favorites.
+        /// </summary>
+        public static string Menu_Overlay_Games_Favorites {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Games.Favorites", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Joining {0}….
+        /// </summary>
+        public static string Menu_Overlay_Games_Joining {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Games.Joining", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Join a game, or allow cookie access, to see your favorites..
+        /// </summary>
+        public static string Menu_Overlay_Games_NoAccount {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Games.NoAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No favorites yet. Favorite an experience on Roblox and it&apos;ll show up here..
+        /// </summary>
+        public static string Menu_Overlay_Games_NoFavorites {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Games.NoFavorites", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nothing found for &quot;{0}&quot;..
+        /// </summary>
+        public static string Menu_Overlay_Games_NoResults {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Games.NoResults", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} playing.
+        /// </summary>
+        public static string Menu_Overlay_Games_Playing {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Games.Playing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        public static string Menu_Overlay_Games_Search {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Games.Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search experiences.
+        /// </summary>
+        public static string Menu_Overlay_Games_SearchPlaceholder {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Games.SearchPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search for an experience to jump into..
+        /// </summary>
+        public static string Menu_Overlay_Games_SearchPrompt {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Games.SearchPrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No conversations..
+        /// </summary>
+        public static string Menu_Overlay_Messages_Empty {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Messages.Empty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select a conversation to start chatting..
+        /// </summary>
+        public static string Menu_Overlay_Messages_PickConversation {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Messages.PickConversation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search conversations.
+        /// </summary>
+        public static string Menu_Overlay_Messages_Search {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Messages.Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Send.
+        /// </summary>
+        public static string Menu_Overlay_Messages_Send {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Messages.Send", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Write a message.
+        /// </summary>
+        public static string Menu_Overlay_Messages_Write {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Messages.Write", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The quick brown fox jumps over the lazy dog.
+        /// </summary>
+        public static string Menu_Overlay_Notes_Placeholder {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Notes.Placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saved at {0}.
+        /// </summary>
+        public static string Menu_Overlay_Notes_SavedAt {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Notes.SavedAt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not save.
+        /// </summary>
+        public static string Menu_Overlay_Notes_SaveFailed {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Notes.SaveFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unsaved changes.
+        /// </summary>
+        public static string Menu_Overlay_Notes_Unsaved {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Notes.Unsaved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not in an experience.
+        /// </summary>
+        public static string Menu_Overlay_NotInGame {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.NotInGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Everyone.
+        /// </summary>
+        public static string Menu_Overlay_Privacy_Everyone {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Privacy.Everyone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Friends.
+        /// </summary>
+        public static string Menu_Overlay_Privacy_Friends {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Privacy.Friends", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Friends &amp; following.
+        /// </summary>
+        public static string Menu_Overlay_Privacy_FriendsAndFollowing {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Privacy.FriendsAndFollowing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Friends, followers &amp; following.
+        /// </summary>
+        public static string Menu_Overlay_Privacy_FriendsFollowingAndFollowers {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Privacy.FriendsFollowingAndFollowers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Changes your Roblox account setting. Anyone who can&apos;t see you&apos;re online can&apos;t join you either..
+        /// </summary>
+        public static string Menu_Overlay_Privacy_Hint {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Privacy.Hint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saved. Who can join you was narrowed to match..
+        /// </summary>
+        public static string Menu_Overlay_Privacy_JoinNarrowed {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Privacy.JoinNarrowed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Couldn&apos;t read your settings from Roblox. Try again in a moment..
+        /// </summary>
+        public static string Menu_Overlay_Privacy_LoadFailed {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Privacy.LoadFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Checking your settings….
+        /// </summary>
+        public static string Menu_Overlay_Privacy_Loading {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Privacy.Loading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Allow cookie access in Fishstrap&apos;s settings to change this from here..
+        /// </summary>
+        public static string Menu_Overlay_Privacy_NeedsCookies {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Privacy.NeedsCookies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No one.
+        /// </summary>
+        public static string Menu_Overlay_Privacy_NoOne {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Privacy.NoOne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Roblox didn&apos;t accept that: {0}.
+        /// </summary>
+        public static string Menu_Overlay_Privacy_Rejected {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Privacy.Rejected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saved..
+        /// </summary>
+        public static string Menu_Overlay_Privacy_Saved {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Privacy.Saved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Roblox didn&apos;t accept that. What&apos;s ticked is what your account has now..
+        /// </summary>
+        public static string Menu_Overlay_Privacy_SaveFailed {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Privacy.SaveFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saving….
+        /// </summary>
+        public static string Menu_Overlay_Privacy_Saving {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Privacy.Saving", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Who can see you&apos;re online.
+        /// </summary>
+        public static string Menu_Overlay_Privacy_Title {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Privacy.Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose who can see you&apos;re online.
+        /// </summary>
+        public static string Menu_Overlay_Privacy_Tooltip {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Privacy.Tooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trusted friends.
+        /// </summary>
+        public static string Menu_Overlay_Privacy_TrustedFriends {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Privacy.TrustedFriends", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Refresh.
+        /// </summary>
+        public static string Menu_Overlay_Refresh {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Refresh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All regions.
+        /// </summary>
+        public static string Menu_Overlay_Servers_AllRegions {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Servers.AllRegions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Couldn&apos;t copy.
+        /// </summary>
+        public static string Menu_Overlay_Servers_CopyFailed {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Servers.CopyFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copy invite link.
+        /// </summary>
+        public static string Menu_Overlay_Servers_CopyLink {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Servers.CopyLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You&apos;re here.
+        /// </summary>
+        public static string Menu_Overlay_Servers_Current {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Servers.Current", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No public servers found..
+        /// </summary>
+        public static string Menu_Overlay_Servers_Empty {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Servers.Empty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No servers running in {0} right now..
+        /// </summary>
+        public static string Menu_Overlay_Servers_EmptyRegion {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Servers.EmptyRegion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hide full servers.
+        /// </summary>
+        public static string Menu_Overlay_Servers_HideFull {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Servers.HideFull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Server hop.
+        /// </summary>
+        public static string Menu_Overlay_Servers_Hop {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Servers.Hop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hopping servers….
+        /// </summary>
+        public static string Menu_Overlay_Servers_Hopping {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Servers.Hopping", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Join a random other server that has room.
+        /// </summary>
+        public static string Menu_Overlay_Servers_HopTooltip {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Servers.HopTooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Instance ID copied.
+        /// </summary>
+        public static string Menu_Overlay_Servers_IdCopied {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Servers.IdCopied", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Join.
+        /// </summary>
+        public static string Menu_Overlay_Servers_Join {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Servers.Join", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Link copied.
+        /// </summary>
+        public static string Menu_Overlay_Servers_LinkCopied {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Servers.LinkCopied", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No other server with room.
+        /// </summary>
+        public static string Menu_Overlay_Servers_NoHopTarget {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Servers.NoHopTarget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Join an experience to browse its servers..
+        /// </summary>
+        public static string Menu_Overlay_Servers_NotInGame {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Servers.NotInGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Region.
+        /// </summary>
+        public static string Menu_Overlay_Servers_Region {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Servers.Region", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sort by players.
+        /// </summary>
+        public static string Menu_Overlay_Servers_SortByPlayers {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Servers.SortByPlayers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} servers.
+        /// </summary>
+        public static string Menu_Overlay_Servers_Summary {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Servers.Summary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Up ~{0}.
+        /// </summary>
+        public static string Menu_Overlay_Servers_UptimeEstimate {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Servers.UptimeEstimate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Up {0}.
+        /// </summary>
+        public static string Menu_Overlay_Servers_UptimeExact {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Servers.UptimeExact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Session.
+        /// </summary>
+        public static string Menu_Overlay_Session {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Session", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Badges.
+        /// </summary>
+        public static string Menu_Overlay_Tab_Badges {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Tab.Badges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Games.
+        /// </summary>
+        public static string Menu_Overlay_Tab_Games {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Tab.Games", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Messages.
+        /// </summary>
+        public static string Menu_Overlay_Tab_Messages {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Tab.Messages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notes.
+        /// </summary>
+        public static string Menu_Overlay_Tab_Notes {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Tab.Notes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Servers.
+        /// </summary>
+        public static string Menu_Overlay_Tab_Servers {
+            get {
+                return ResourceManager.GetString("Menu.Overlay.Tab.Servers", resourceCulture);
             }
         }
         

@@ -29,6 +29,7 @@
     <Resource Include="Resources\LightEditor.xshd" />
     <Resource Include="Resources\Fonts\NotoSansThai-VariableFont_wdth,wght.ttf" />
     <Resource Include="Resources\Fonts\Rubik-VariableFont_wght.ttf" />
+    <Resource Include="Resources\Fonts\Inter-VariableFont_opsz,wght.ttf" />
     <Resource Include="Resources\BootstrapperStyles\ByfronDialog\ByfronLogoDark.jpg" />
     <Resource Include="Resources\BootstrapperStyles\ByfronDialog\ByfronLogoLight.jpg" />
     <Resource Include="Resources\BootstrapperStyles\ByfronDialog\Matt.png" />

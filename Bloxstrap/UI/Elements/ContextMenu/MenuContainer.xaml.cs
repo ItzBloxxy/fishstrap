@@ -37,7 +37,7 @@ namespace Bloxstrap.UI.Elements.ContextMenu
                 _activityWatcher.OnGameJoin += ActivityWatcher_OnGameJoin;
                 _activityWatcher.OnGameLeave += ActivityWatcher_OnGameLeave;
 
-                if (!App.Settings.Prop.UseDisableAppPatch)
+                if (!App.Settings.Prop.UseDisableAppPatch && _watcher.Overlay is null)
                     GameHistoryMenuItem.Visibility = Visibility.Visible;
             }
 

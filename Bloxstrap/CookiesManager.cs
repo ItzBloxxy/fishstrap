@@ -1,5 +1,6 @@
 ﻿using Bloxstrap.RobloxInterfaces;
 using System;
+using System.Net.WebSockets;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -23,13 +24,36 @@ namespace Bloxstrap
         public bool Loaded => Enabled && State == CookieState.Success;
         private bool Enabled => App.Settings.Prop.AllowCookieAccess;
 
+        public AuthenticatedUser? CurrentUser { get; private set; }
+
+        public bool IsAuthenticated => CurrentUser is not null;
+
         private string AuthCookie = string.Empty;
         private const string AuthCookieName = ".ROBLOSECURITY";
         private const string SupportedVersion = "1";
         private const string AuthPattern = $@"\t{AuthCookieName}\t(.+?)(;|$)";
+
+        private const string TrackerCookieName = "RBXEventTrackerV2";
+        private const string TrackerPattern = $@"\t{TrackerCookieName}\t(.+?)(;|$)";
+
+        private string BrowserTracker = string.Empty;
         private string CookiesPath => Path.Combine(Paths.Roblox, "LocalStorage", Deployment.IsDefaultRobloxDomain ? "RobloxCookies.dat" : $"{Deployment.RobloxDomain}_RobloxCookies.dat");
 
-        public async Task<HttpResponseMessage> AuthRequest(HttpRequestMessage request)
+        public async Task<string> GetXCSRF()
+        {
+            Uri logoutUrl = UrlBuilder.BuildApiUrl("auth", "v2/logout");
+
+            HttpResponseMessage response = await AuthPost(logoutUrl, null);
+
+            response.Headers.TryGetValues("x-csrf-token", out IEnumerable<string>? values);
+
+            if (values is null)
+                throw new HttpRequestException("Failed to get x-csrf-token from response");
+
+            return values.First();
+        }
+
+        public async Task<HttpResponseMessage> AuthRequest(HttpRequestMessage request, string csrf = "")
         {
             string? host = request.RequestUri?.Host;
 
@@ -46,14 +70,70 @@ namespace Bloxstrap
             if (!Enabled)
                 throw new NullReferenceException("Cookie access is not enabled");
 
-            request.Headers.Add("Cookie", $".ROBLOSECURITY={AuthCookie}");
+            if (!String.IsNullOrEmpty(csrf))
+                request.Headers.Add("x-csrf-token", csrf);
+
+            request.Headers.Add("Cookie", String.IsNullOrEmpty(BrowserTracker)
+                ? $".ROBLOSECURITY={AuthCookie}"
+                : $".ROBLOSECURITY={AuthCookie}; {TrackerCookieName}={BrowserTracker}");
             var response = await App.HttpClient.SendAsync(request);
 
             return response;
         }
 
-        public async Task<HttpResponseMessage> AuthGet(Uri? uri) => await AuthRequest(new HttpRequestMessage { RequestUri = uri, Method = HttpMethod.Get });
-        public async Task<HttpResponseMessage> AuthPost(Uri? uri, HttpContent? content) => await AuthRequest(new HttpRequestMessage { RequestUri = uri, Content = content, Method = HttpMethod.Post });
+        public async Task<HttpResponseMessage> AuthGet(Uri? uri, string csrf = "") => await AuthRequest(new HttpRequestMessage { RequestUri = uri, Method = HttpMethod.Get }, csrf);
+        public async Task<HttpResponseMessage> AuthPost(Uri? uri, HttpContent? content, string csrf = "") => await AuthRequest(new HttpRequestMessage { RequestUri = uri, Content = content, Method = HttpMethod.Post }, csrf);
+
+        public void AuthWebsocket(ClientWebSocket webSocket)
+        {
+            if (!Enabled)
+                throw new NullReferenceException("Cookie access is not enabled");
+
+            webSocket.Options.SetRequestHeader("Cookie", $".ROBLOSECURITY={AuthCookie}");
+        }
+
+        public async Task EnsureBrowserTrackerAsync()
+        {
+            const string LOG_IDENT = "CookiesManager::EnsureBrowserTrackerAsync";
+
+            if (!String.IsNullOrEmpty(BrowserTracker))
+                return;
+
+            try
+            {
+                using var handler = new HttpClientHandler { UseCookies = false };
+                using var client = new HttpClient(handler);
+
+                client.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36");
+
+                using var response = await client.GetAsync($"https://www.{Deployment.RobloxDomain}/");
+
+                string? tracker = null;
+
+                if (response.Headers.TryGetValues("Set-Cookie", out IEnumerable<string>? cookies))
+                {
+                    tracker = cookies
+                        .Select(x => Regex.Match(x, $@"^{TrackerCookieName}=([^;]+)"))
+                        .FirstOrDefault(x => x.Success)?
+                        .Groups[1].Value;
+                }
+
+                if (String.IsNullOrEmpty(tracker))
+                {
+                    App.Logger.WriteLine(LOG_IDENT, "Roblox didn't issue a browser tracker");
+                    return;
+                }
+
+                BrowserTracker = tracker;
+
+                App.Logger.WriteLine(LOG_IDENT, "Roblox issued a browser tracker");
+            }
+            catch (Exception ex)
+            {
+                App.Logger.WriteLine(LOG_IDENT, "Failed to get a browser tracker");
+                App.Logger.WriteException(LOG_IDENT, ex);
+            }
+        }
 
         public async Task<AuthenticatedUser?> GetAuthenticated()
         {
@@ -131,6 +211,13 @@ namespace Bloxstrap
                 string authCookie = authCookieMatch.Groups[1].Value;
                 AuthCookie = authCookie; // could use better naming
 
+                Match trackerMatch = Regex.Match(rawCookies, TrackerPattern);
+
+                if (trackerMatch.Success)
+                    BrowserTracker = trackerMatch.Groups[1].Value;
+
+                App.Logger.WriteLine(LOG_IDENT, trackerMatch.Success ? "Found a browser tracker" : "No browser tracker in the cookie store");
+
                 // we test the cookie to see if its valid
                 AuthenticatedUser? user = await GetAuthenticated();
                 if (user is null || user?.Id == 0)
@@ -141,6 +228,7 @@ namespace Bloxstrap
                 }
 
                 State = CookieState.Success;
+                CurrentUser = user;
             }
             catch (Exception ex)
             {

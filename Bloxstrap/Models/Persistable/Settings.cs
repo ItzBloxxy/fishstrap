@@ -53,6 +53,8 @@ namespace Bloxstrap.Models.Persistable
             "FishstrapLogs"
         };
         public bool EnableWindowManipulation { get; set; } = false;
+
+        public bool EnableOverlay { get; set; } = false;
         public bool FakeBorderlessFullscreen { get; set; } = false;
         public bool EnableActivityTracking { get; set; } = true;
         public bool UseDiscordRichPresence { get; set; } = true;

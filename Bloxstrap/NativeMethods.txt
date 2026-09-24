@@ -12,3 +12,12 @@ SHObjectProperties
 GetCursorPos
 MoveWindow
 GetWindowRect
+RegisterHotKey
+UnregisterHotKey
+IsIconic
+IsZoomed
+GetForegroundWindow
+GetWindowThreadProcessId
+DwmGetWindowAttribute
+GetClientRect
+ClientToScreen
